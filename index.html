@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>quizapp</title>
+  </head>
+  <body>
+    <script>
+      let playAgain;
+      do {
+        const quizQuestions = [
+          {
+            question: "What is 5 + 3?",
+            answer: "8",
+          },
+          {
+            question: "what is the capital of Ghana?",
+            answer: "Accra",
+          },
+          {
+            question: "Is the sun a star?",
+            answer: "true",
+          },
+          {
+            question: "how many legs does a spider have?",
+            answer: "8",
+          },
+          {
+            question: "which continent is Brazil located in?",
+            answer: "South America",
+          },
+        ];
+        let score = 0;
+        const totalQuestions = quizQuestions.length;
+
+        for (let i = 0; i < quizQuestions.length; i++) {
+          let userAnswer = prompt(quizQuestions[i].question);
+          console.log("you answered: " + userAnswer);
+          if (
+            userAnswer.toLowerCase() === quizQuestions[i].answer.toLowerCase()
+          ) {
+            score++;
+            console.log("correct");
+          } else {
+            console.log(
+              "wrong! The correct answer was: " + quizQuestions[i].answer
+            );
+          }
+        }
+        console.log("Quiz Complete!");
+        console.log("Your final score: " + score + " out of " + totalQuestions);
+        playAgain = prompt("Do you want to play again? (yes/no)");
+      } while (playAgain === "yes");
+    </script>
+  </body>
+</html>
