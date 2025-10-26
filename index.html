@@ -11,24 +11,28 @@
       do {
         const quizQuestions = [
           {
-            question: "What is 5 + 3?",
-            answer: "8",
+            question: "What data type is 'Hello World' in JavaScript?",
+            answer: "string",
           },
+
           {
-            question: "what is the capital of Ghana?",
-            answer: "Accra",
+            question:
+              "Which keyword creates a variable that cannot be changed?",
+            answer: "const",
           },
+
           {
-            question: "Is the sun a star?",
+            question: "True or False: JavaScript is case-sensitive?",
             answer: "true",
           },
           {
-            question: "how many legs does a spider have?",
-            answer: "8",
+            question: "What symbol is used to create an array in JavaScript?",
+            answer: "[]",
           },
           {
-            question: "which continent is Brazil located in?",
-            answer: "South America",
+            question:
+              "What keyword is used to create a function in JavaScript?",
+            answer: "function",
           },
         ];
         let score = 0;
@@ -37,6 +41,7 @@
         for (let i = 0; i < quizQuestions.length; i++) {
           let userAnswer = prompt(quizQuestions[i].question);
           console.log("you answered: " + userAnswer);
+
           if (
             userAnswer.toLowerCase() === quizQuestions[i].answer.toLowerCase()
           ) {
